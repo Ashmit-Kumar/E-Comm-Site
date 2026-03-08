@@ -1,0 +1,37 @@
+# Terraform state & secrets — NEVER include these in a Docker image
+terraform/
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# IDE & OS files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Git history (reduces image size)
+.git/
+.gitignore
+
+# Docs
+README.md
+*.md
+
+# Docker files themselves
+Dockerfile
+.dockerignore
