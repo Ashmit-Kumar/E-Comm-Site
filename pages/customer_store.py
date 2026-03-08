@@ -88,3 +88,4 @@ def customer_store():
                         st.session_state.selected_product = row["id"]
                         st.session_state.page = "product"
                         st.rerun()
+                        
