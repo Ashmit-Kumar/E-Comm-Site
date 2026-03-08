@@ -1,5 +1,13 @@
 import streamlit as st
 
+# 1. Global Configuration — MUST be the very first Streamlit command
+st.set_page_config(
+    page_title="SmartStore AI",
+    page_icon="🛍️",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # --- STICKY HEADER ---
 # We use position: sticky and top: 2.8rem so it sits neatly just below Streamlit's default hamburger menu
 sticky_header = """
@@ -40,14 +48,6 @@ sticky_header = """
 
 # Render the header globally
 st.markdown(sticky_header, unsafe_allow_html=True)
-
-# 1. Global Configuration (Must be the very first Streamlit command)
-st.set_page_config(
-    page_title="SmartStore AI",
-    page_icon="🛍️",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 # --- CUSTOM CSS FOR MINIMALIST UI ---
 # This hides default Streamlit branding and adds subtle hover effects
